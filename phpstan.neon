@@ -1,0 +1,27 @@
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - vendor
+    reportUnmatchedIgnoredErrors: false
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: true
+    ignoreErrors:
+        # PHPUnit dynamic calls to static methods are normal
+        - '#Dynamic call to static method PHPUnit\\Framework\\#'
+        # file_get_contents can return false, but in tests we control the input
+        -
+            message: '#Parameter \#2 \$str of function explode expects string, string\|false given#'
+            path: tests/
+        -
+            message: '#Parameter \#1 \$str of function trim expects string, string\|false given#'
+            path: tests/
+        # json_decode returns mixed, we check it in tests
+        -
+            message: '#Cannot access offset .* on mixed#'
+            path: tests/

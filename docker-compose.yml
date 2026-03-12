@@ -1,0 +1,12 @@
+services:
+  php:
+    build: .
+    volumes:
+      - .:/app
+      - vendor:/app/vendor
+    working_dir: /app
+    environment:
+      - APP_ENV=testing
+
+volumes:
+  vendor:

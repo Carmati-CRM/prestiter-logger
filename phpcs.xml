@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ruleset name="Prestiter Logger Coding Standard">
+    <description>Coding standard for Prestiter Logger library</description>
+
+    <!-- Paths to check -->
+    <file>src</file>
+    <file>tests</file>
+
+    <!-- Exclude vendor -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <!-- Use PSR-12 as base -->
+    <rule ref="PSR12"/>
+
+    <!-- Additional rules -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="150"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <properties>
+            <property name="spacing" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+
+    <!-- Use colors -->
+    <arg name="colors"/>
+
+    <!-- Show sniff codes in reports -->
+    <arg value="s"/>
+</ruleset>
