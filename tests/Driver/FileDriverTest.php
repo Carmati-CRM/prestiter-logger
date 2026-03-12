@@ -43,6 +43,7 @@ final class FileDriverTest extends TestCase
         $this->assertFileExists($this->testFilePath);
 
         $content = file_get_contents($this->testFilePath);
+        $this->assertIsString($content);
         $this->assertNotEmpty($content);
 
         $decoded = json_decode(trim($content), true);
@@ -80,6 +81,7 @@ final class FileDriverTest extends TestCase
         $driver->send($entry2);
 
         $content = file_get_contents($this->testFilePath);
+        $this->assertIsString($content);
         $lines = array_filter(explode(PHP_EOL, $content));
 
         $this->assertCount(2, $lines);
@@ -118,6 +120,7 @@ final class FileDriverTest extends TestCase
         $driver->send($entry);
 
         $content = file_get_contents($this->testFilePath);
+        $this->assertIsString($content);
         $decoded = json_decode(trim($content), true);
 
         $this->assertEquals(500, $decoded['http_status']);
@@ -153,6 +156,7 @@ final class FileDriverTest extends TestCase
         }
 
         $content = file_get_contents($this->testFilePath);
+        $this->assertIsString($content);
         $lines = array_filter(explode(PHP_EOL, $content));
 
         $this->assertCount(5, $lines);
