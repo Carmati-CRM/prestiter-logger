@@ -1,9 +1,8 @@
 # Prestiter Logger
 
-[![CI](https://github.com/prestiter/logger/actions/workflows/ci.yml/badge.svg)](https://github.com/prestiter/logger/actions/workflows/ci.yml)
-[![PHP Version](https://img.shields.io/packagist/php-v/prestiter/logger)](https://packagist.org/packages/prestiter/logger)
-[![Latest Version](https://img.shields.io/packagist/v/prestiter/logger)](https://packagist.org/packages/prestiter/logger)
-[![License](https://img.shields.io/packagist/l/prestiter/logger)](LICENSE)
+[![CI](https://github.com/Carmati-CRM/prestiter-logger/actions/workflows/ci.yml/badge.svg)](https://github.com/Carmati-CRM/prestiter-logger/actions/workflows/ci.yml)
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D7.4-8892BF)](composer.json)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 A structured logging library for PHP that is agnostic from the destination SaaS. Your application code doesn't need to know where logs are being sent.
 
@@ -21,7 +20,7 @@ Add the repository to your `composer.json`:
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/your-username/prestiter-logger"
+            "url": "https://github.com/Carmati-CRM/prestiter-logger"
         }
     ],
     "require": {

@@ -1,6 +1,6 @@
 FROM php:7.4-cli-alpine
 
-LABEL maintainer="Prestiter <info@prestiter.it>"
+LABEL maintainer="Alfabiz srl <info@prestiter.it>"
 LABEL description="Development environment for Prestiter Logger"
 
 # Install system dependencies

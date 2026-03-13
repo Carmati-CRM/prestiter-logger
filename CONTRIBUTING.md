@@ -25,7 +25,7 @@ Feature suggestions are welcome. Please use the feature request template and pro
 ## Development Setup
 
 ```bash
-git clone https://github.com/your-username/prestiter-logger.git
+git clone https://github.com/Carmati-CRM/prestiter-logger.git
 cd prestiter-logger
 composer install
 ```
